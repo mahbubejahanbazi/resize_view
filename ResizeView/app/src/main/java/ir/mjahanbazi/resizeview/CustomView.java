@@ -1,38 +1,5 @@
-# An Application That Can Resize A View. 
-The application has anchors on the view to resize the view in any direction, in addition the view is moveable in the activity area.
+package ir.mjahanbazi.resizeview;
 
-
-## Tech Stack
-
-### Java
-
-<p align="center">
-  <img src="https://github.com/mahbubejahanbazi/ResizeView/blob/main/images/app.jpg" />
-</p>
-<p align="center">Resize in top direction</p>
-<p align="center">
-  <img src="https://github.com/mahbubejahanbazi/ResizeView/blob/main/images/resize_top.jpg" />
-</p>
-
-<p align="center">Resize in bottom direction</p>
-<p align="center">
-  <img src="https://github.com/mahbubejahanbazi/ResizeView/blob/main/images/resize_bottom.jpg" />
-</p>
-
-<p align="center">Resize in left direction</p>
-<p align="center">
-  <img src="https://github.com/mahbubejahanbazi/ResizeView/blob/main/images/resize_left.jpg" />
-</p>
-
-<p align="center">Resize in all direction</p>
-<p align="center">
-  <img src="https://github.com/mahbubejahanbazi/ResizeView/blob/main/images/resize_all.jpg" />
-</p>
-
-## Source code
-
-CustomView.java
-```java
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -52,19 +19,19 @@ public class CustomView extends RelativeLayout {
     private final Bitmap imageRight = BitmapFactory.decodeResource(getResources(), R.drawable.ic_right);
     private final Bitmap imageTop = BitmapFactory.decodeResource(getResources(), R.drawable.ic_top);
     private final Bitmap imageBottom = BitmapFactory.decodeResource(getResources(), R.drawable.ic_bottom);
-    private final int rectSizeCorner = 150;
-    private final int rectSizeWidth = 120;
-    private final int rectSizeHeight = 80;
     private Rect srcCorner = new Rect();
     private Rect srcLeft = new Rect();
     private Rect srcRight = new Rect();
     private Rect srcTop = new Rect();
     private Rect srcBottom = new Rect();
-    private Rect rectTop = new Rect();
-    private Rect rectBottom = new Rect();
-    private Rect rectLeft = new Rect();
-    private Rect rectRight = new Rect();
-    private Rect rectCorner = new Rect();
+    private Rect rectTop= new Rect();
+    private Rect rectBottom= new Rect();
+    private Rect rectLeft= new Rect();
+    private Rect rectRight= new Rect();
+    private Rect rectCorner= new Rect();
+    private final int rectSizeCorner = 150;
+    private final int rectSizeWidth = 120;
+    private final int rectSizeHeight = 80;
 
     public CustomView(Context context) {
         super(context);
@@ -267,9 +234,6 @@ public class CustomView extends RelativeLayout {
         canvas.drawBitmap(imageBottom, srcBottom, rectBottom, null);
 
     }
+
+
 }
-```
-
-## Contact
-
-mjahanbazi@protonmail.com
